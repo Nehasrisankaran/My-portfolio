@@ -387,7 +387,7 @@ function initProjectModals() {
           </div>
 
           <div style="display:flex; gap:1rem; margin-top:0.5rem; flex-wrap:wrap;">
-            <a href="mailto:nehasri.23cb025@gmail.com?subject=Inquiry%20about%20${encodeURIComponent(data.title)}" class="btn btn-primary btn-sm">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=workwithnehasri@gmail.com&su=Inquiry%20about%20${encodeURIComponent(data.title)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               Inquire About This Build
             </a>
@@ -442,7 +442,7 @@ function initTerminal() {
   • <span style="color:var(--accent-primary)">clear</span>       : Clear the console window`,
 
     about: `<span style="color:var(--text-primary); font-weight:600;">Nehasri S — AI Engineer · Team Lead · Builder</span>
-Based in Rasipuram, Tamil Nadu · Open to Remote across India & Relocation.
+Based in Tamil Nadu, India · Open to opportunities across India & Abroad (Remote / Hybrid / Relocation).
 Specializes in LLM integrations, RAG platforms, autonomous AI agents, and enterprise FastAPI backends.
 Fluent in: English, Tamil, Telugu, Hindi.`,
 
@@ -461,25 +461,24 @@ Fluent in: English, Tamil, Telugu, Hindi.`,
 [Timeline]     Jan 2026 – Present (Promoted to Team Lead in Aug 2026)
 [Focus]        Enterprise AI systems, autonomous agents, team sprint delivery & mentoring.`,
 
-    awards: `★ <span style="color:var(--accent-primary)">Dr. APJ Abdul Kalam Award</span> for Best Engineering Students (IEI, 2026)
+    awards: `★ <span style="color:var(--accent-primary)">Dr. APJ Abdul Kalam Award</span> for Best Engineering College Student (IEI, 2026)
 ★ <span style="color:var(--accent-primary)">Microsoft Certified</span>: Azure Fundamentals (AZ-900) — 90% (Jun 2025)
-★ <span style="color:var(--accent-primary)">NPTEL Elite + Top 5%</span>: Blockchain & Applications, IIT Kharagpur (81%)
 ★ <span style="color:var(--accent-primary)">Claude Code in Action</span>: Anthropic Education (Mar 2026)`,
 
     boutique: `Clothing Brand: <span style="color:#fb7185; font-weight:bold;">Okaybruh Clothing</span>
 Independent brand built & run by Nehasri S.
 Featuring custom apparel, digital drops, and growing community.
-Direct message for orders: nehasri.23cb025@gmail.com`,
+Direct message for orders: workwithnehasri@gmail.com`,
 
     creator: `Creator Highlights:
 • <span style="color:var(--accent-primary)">6,000+</span> YouTube Subscribers (lifestyle, tech, short-form)
 • 2 Active Instagram profiles with high community engagement & brand collaborations
 • Open to podcast guest appearances and tech panels.`,
 
-    contact: `Email  : <a href="mailto:nehasri.23cb025@gmail.com" style="color:var(--accent-primary)">nehasri.23cb025@gmail.com</a>
-Phone  : <a href="tel:+917339259347" style="color:var(--accent-primary)">+91 73392 59347</a>
+    contact: `Email   : <a href="mailto:workwithnehasri@gmail.com" style="color:var(--accent-primary)">workwithnehasri@gmail.com</a> (Primary Contact)
+Phone   : Available upon verified request (reach out via email)
 LinkedIn: <a href="https://www.linkedin.com/in/nehasri-sankaran-b341aa315" target="_blank" style="color:var(--accent-primary)">linkedin.com/in/nehasri-sankaran-b341aa315</a>
-GitHub : <a href="https://github.com/Nehasrisankaran" target="_blank" style="color:var(--accent-primary)">github.com/Nehasrisankaran</a>`
+GitHub  : <a href="https://github.com/Nehasrisankaran" target="_blank" style="color:var(--accent-primary)">github.com/Nehasrisankaran</a>`
   };
 
   function executeCommand(raw) {
@@ -550,7 +549,7 @@ function showToast(message) {
 
 function initContactInteractions() {
   // Copy buttons
-  document.querySelectorAll('.copy-pill-btn').forEach(btn => {
+  document.querySelectorAll('.copy-pill-btn[data-copy]').forEach(btn => {
     btn.addEventListener('click', () => {
       const text = btn.getAttribute('data-copy');
       if (!text) return;
@@ -562,7 +561,110 @@ function initContactInteractions() {
     });
   });
 
-  // Contact Form Submission (direct mailto generator with instant toast)
+  // Gmail link toast feedback
+  document.querySelectorAll('a[href^="https://mail.google.com"]').forEach(link => {
+    link.addEventListener('click', () => {
+      showToast('Opening Gmail compose tab in a new window...');
+    });
+  });
+
+  // Universal handler: automatically converts any mailto link into direct Gmail web compose in a new tab!
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('mailto:')) {
+        const raw = href.replace('mailto:', '');
+        const [toPart, queryPart] = raw.split('?');
+        const to = toPart || 'workwithnehasri@gmail.com';
+        const params = new URLSearchParams(queryPart || '');
+        const subject = params.get('subject') || '';
+        const body = params.get('body') || '';
+
+        let gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}`;
+        if (subject) gmailUrl += `&su=${encodeURIComponent(subject)}`;
+        if (body) gmailUrl += `&body=${encodeURIComponent(body)}`;
+
+        window.open(gmailUrl, '_blank');
+        showToast('Opening Gmail compose in a new tab...');
+        e.preventDefault();
+      }
+    });
+  });
+
+  // Phone Request Modal Handlers
+  const phoneModal = document.getElementById('phone-modal');
+  const phoneTrigger = document.getElementById('request-phone-trigger');
+  const phoneCloseBtn = document.getElementById('phone-modal-close');
+  const copyTemplateBtn = document.getElementById('modal-copy-template-btn');
+  const useFormBtn = document.getElementById('modal-use-form-btn');
+
+  function openPhoneModal() {
+    if (!phoneModal) return;
+    phoneModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePhoneModal() {
+    if (!phoneModal) return;
+    phoneModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (phoneTrigger) {
+    phoneTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPhoneModal();
+    });
+  }
+
+  if (phoneCloseBtn) {
+    phoneCloseBtn.addEventListener('click', closePhoneModal);
+  }
+
+  if (phoneModal) {
+    phoneModal.addEventListener('click', (e) => {
+      if (e.target === phoneModal) closePhoneModal();
+    });
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && phoneModal && phoneModal.classList.contains('active')) {
+      closePhoneModal();
+    }
+  });
+
+  // Copy template in modal
+  if (copyTemplateBtn) {
+    copyTemplateBtn.addEventListener('click', () => {
+      const template = `To: workwithnehasri@gmail.com\nSubject: Phone Number Request - Nehasri Portfolio\n\nHi Nehasri,\nI would like to request your direct phone/WhatsApp contact to discuss a potential opportunity or project.\n\n• My Name & Company:\n• Purpose of call:\n• Preferred callback time:`;
+      navigator.clipboard.writeText(template).then(() => {
+        showToast('Copied email template to clipboard! Ready to paste into Gmail.');
+      }).catch(() => {
+        showToast('Template copied to clipboard!');
+      });
+    });
+  }
+
+  // Pre-fill on-page contact form
+  if (useFormBtn) {
+    useFormBtn.addEventListener('click', () => {
+      closePhoneModal();
+      const formSection = document.getElementById('contact-form');
+      const subjectInput = document.getElementById('form-subject');
+      const messageInput = document.getElementById('form-message');
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (subjectInput) subjectInput.value = 'Phone / WhatsApp Number Request';
+        if (messageInput) {
+          messageInput.placeholder = 'Please share your organization name, purpose of call, and your preferred callback time...';
+          setTimeout(() => messageInput.focus(), 400);
+        }
+        showToast('Pre-filled contact form below with Phone Request!');
+      }
+    });
+  }
+
+  // Contact Form Submission (opens Gmail web compose tab with pre-filled message)
   const form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', (e) => {
@@ -572,10 +674,10 @@ function initContactInteractions() {
       const subject = document.getElementById('form-subject').value.trim() || 'Portfolio Inquiry';
       const message = document.getElementById('form-message').value.trim();
 
-      const mailtoUrl = `mailto:nehasri.23cb025@gmail.com?subject=${encodeURIComponent(`[Portfolio] ${subject} from ${name}`)}&body=${encodeURIComponent(`Hi Nehasri,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`)}`;
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=workwithnehasri@gmail.com&su=${encodeURIComponent(`[Portfolio] ${subject} from ${name}`)}&body=${encodeURIComponent(`Hi Nehasri,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`)}`;
 
-      window.location.href = mailtoUrl;
-      showToast('Opening your email client to send message to Nehasri!');
+      window.open(gmailUrl, '_blank');
+      showToast('Opening Gmail compose in a new tab with your message!');
       form.reset();
     });
   }

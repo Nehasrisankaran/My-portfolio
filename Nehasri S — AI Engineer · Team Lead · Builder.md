@@ -8,7 +8,7 @@ AI Engineer · Team Lead · Builder
 
 I build intelligent applications, lead technical work, and create things beyond code — from enterprise AI systems to a clothing brand and digital content.
 
-[Get in touch](mailto:nehasri.23cb025@gmail.com)[LinkedIn](https://www.linkedin.com/in/nehasri-sankaran-b341aa315)[GitHub](https://github.com/Nehasrisankaran)
+[Get in touch](mailto:workwithnehasri@gmail.com)[LinkedIn](https://www.linkedin.com/in/nehasri-sankaran-b341aa315)[GitHub](https://github.com/Nehasrisankaran)
 
 ## About
 
@@ -76,9 +76,8 @@ Microsoft GraphTeamsSharePointAzureGit & GitHubStreamlitTeam leadership
 
 ### Certifications & Awards
 
+- Dr. APJ Abdul Kalam Award for Best Engineering College Student — The Institution of Engineers (India), 2026
 - Microsoft Certified: Azure Fundamentals (AZ-900) — 90%, Jun 2025
-- Dr. APJ Abdul Kalam Award for Best Engineering Students — The Institution of Engineers (India), 2026
-- NPTEL: Blockchain and its Applications, IIT Kharagpur — Elite, 81%, Top 5%, Apr 2026
 - Claude Code in Action — Anthropic Education, Mar 2026
 
 ## Freelance Digital Studio
@@ -101,7 +100,7 @@ REST APIs, databases, admin dashboards, internal tools and integrations.
 
 RAG assistants, chatbots, document processing and workflow automation.
 
-[Start a Project](mailto:nehasri.23cb025@gmail.com?subject=Project%20inquiry)
+[Start a Project](mailto:workwithnehasri@gmail.com?subject=Project%20inquiry)
 
 ## The Boutique
 
@@ -109,7 +108,7 @@ RAG assistants, chatbots, document processing and workflow automation.
 
 I sell my own clothing. To see what's available, ask about sizes or place an order, message me directly. An online checkout is not live yet.
 
-[Ask About an Order](mailto:nehasri.23cb025@gmail.com?subject=Clothing%20order%20inquiry)
+[Ask About an Order](mailto:workwithnehasri@gmail.com?subject=Clothing%20order%20inquiry)
 
 ## Speaking & Mentoring
 
@@ -117,13 +116,13 @@ I mentor students and am open to invitations from colleges, student clubs, commu
 
 Backend developmentAPIs & databasesIntro to generative AIBuilding real-world projectsCareer guidance for developersPortfolio guidance
 
-[Book a Technical Session](mailto:nehasri.23cb025@gmail.com?subject=Technical%20session%20invitation)[Discuss Mentoring](mailto:nehasri.23cb025@gmail.com?subject=Mentoring%20program)
+[Book a Technical Session](mailto:workwithnehasri@gmail.com?subject=Technical%20session%20invitation)[Discuss Mentoring](mailto:workwithnehasri@gmail.com?subject=Mentoring%20program)
 
 ## Creator & Collaborations
 
 Open to podcast and YouTube guest appearances, interviews, and brand or creator collaborations around technology, AI, women in tech, career journeys and fashion.
 
-[Invite Me as a Guest](mailto:nehasri.23cb025@gmail.com?subject=Podcast%20or%20channel%20invitation)[Propose a Collaboration](mailto:nehasri.23cb025@gmail.com?subject=Collaboration%20proposal)
+[Invite Me as a Guest](mailto:workwithnehasri@gmail.com?subject=Podcast%20or%20channel%20invitation)[Propose a Collaboration](mailto:workwithnehasri@gmail.com?subject=Collaboration%20proposal)
 
 ## Beyond Engineering
 
@@ -145,6 +144,6 @@ Two Instagram profiles with content built around consistency and community, plus
 
 Hiring, collaborating or want to talk about my brand? I'd love to hear from you.
 
-[nehasri.23cb025@gmail.com](mailto:nehasri.23cb025@gmail.com)+91 73392 59347[LinkedIn](https://www.linkedin.com/in/nehasri-sankaran-b341aa315)[GitHub](https://github.com/Nehasrisankaran)
+[workwithnehasri@gmail.com](mailto:workwithnehasri@gmail.com) · [LinkedIn](https://www.linkedin.com/in/nehasri-sankaran-b341aa315) · [GitHub](https://github.com/Nehasrisankaran) · Phone: Available upon verified request
 
 © 2026 Nehasri S

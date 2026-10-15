@@ -3,3 +3,5 @@ copy_portrait.js
 .DS_Store
 Thumbs.db
 node_modules/
+/*.jpg
+

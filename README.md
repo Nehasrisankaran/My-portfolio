@@ -51,11 +51,11 @@ Then visit `http://localhost:8080`.
 
 ## 📬 Contact & Connect
 
-- **Email:** [nehasri.23cb025@gmail.com](mailto:nehasri.23cb025@gmail.com)
+- **Email (Primary):** [workwithnehasri@gmail.com](mailto:workwithnehasri@gmail.com)
 - **LinkedIn:** [linkedin.com/in/nehasri-sankaran-b341aa315](https://www.linkedin.com/in/nehasri-sankaran-b341aa315)
 - **GitHub:** [github.com/Nehasrisankaran](https://github.com/Nehasrisankaran)
-- **Phone:** +91 73392 59347
-- **Location:** Rasipuram, Tamil Nadu (Open to Remote across India & Relocation)
+- **Phone:** Available upon verified request
+- **Work Preferences:** India & Abroad (Open to Full-Time, Remote, Hybrid & Relocation)
 
 ---
 *© 2026 Nehasri S. All rights reserved.*
