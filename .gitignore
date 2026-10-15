@@ -1,0 +1,5 @@
+# Temporary files
+copy_portrait.js
+.DS_Store
+Thumbs.db
+node_modules/
